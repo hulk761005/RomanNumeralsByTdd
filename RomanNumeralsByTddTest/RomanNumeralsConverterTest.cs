@@ -11,7 +11,7 @@ public class RomanNumeralsConverterTest
         var number = 1;
         var converter = new RomanNumeralsConverter();
         var result = converter.Convert(number);
-        
+
         result.Should().Be("I");
     }
 
@@ -21,7 +21,7 @@ public class RomanNumeralsConverterTest
         var number = 2;
         var converter = new RomanNumeralsConverter();
         var result = converter.Convert(number);
-        
+
         result.Should().Be("II");
     }
 
@@ -31,20 +31,20 @@ public class RomanNumeralsConverterTest
         var number = 3;
         var converter = new RomanNumeralsConverter();
         var result = converter.Convert(number);
-        
+
         result.Should().Be("III");
     }
-    
+
     [Fact]
     public void Number_4_Convert_To_IV()
     {
         var number = 4;
         var converter = new RomanNumeralsConverter();
         var result = converter.Convert(number);
-        
+
         result.Should().Be("IV");
     }
-    
+
     [Fact]
     public void Number_5_Convert_To_V()
     {
@@ -54,7 +54,7 @@ public class RomanNumeralsConverterTest
 
         result.Should().Be("V");
     }
-    
+
     [Fact]
     public void Number_6_Convert_To_VI()
     {
@@ -64,7 +64,7 @@ public class RomanNumeralsConverterTest
 
         result.Should().Be("VI");
     }
-    
+
     [Fact]
     public void Number_7_Convert_To_VII()
     {
@@ -74,7 +74,7 @@ public class RomanNumeralsConverterTest
 
         result.Should().Be("VII");
     }
-    
+
     [Fact]
     public void Number_8_Convert_To_VIII()
     {
@@ -83,5 +83,15 @@ public class RomanNumeralsConverterTest
         var result = converter.Convert(number);
 
         result.Should().Be("VIII");
+    }
+
+    [Fact]
+    public void Number_9_Convert_To_IX()
+    {
+        var number = 9;
+        var converter = new RomanNumeralsConverter();
+        var result = converter.Convert(number);
+
+        result.Should().Be("IX");
     }
 }

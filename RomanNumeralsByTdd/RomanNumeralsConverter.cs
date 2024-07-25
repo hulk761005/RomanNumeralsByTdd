@@ -7,12 +7,19 @@ public class RomanNumeralsConverter
     private readonly Dictionary<int, string> RomanNumeralsDictionary = new()
     {
         { 4, "IV" },
-        { 5, "V" }
+        { 2, "V" }
     };
     public string Convert(int number)
     {
-        var remainder = number % 5; 
-        var quotient = number / 5;
+        var remainder = 0; 
+        var quotient = 0;
+        if (number == 9)
+        {
+            return "IX";
+        }
+
+        remainder = number % 5; 
+        quotient = number / 5;
         var sb = new StringBuilder();
         if (quotient > 0)
         {
