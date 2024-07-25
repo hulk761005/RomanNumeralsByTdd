@@ -44,6 +44,8 @@ public class RomanNumeralsConverterTest
     [InlineData(48, "XLVIII")]
     [InlineData(49, "XLIX")]
     [InlineData(50, "L")]
+    [InlineData(72, "LXXII")]
+    [InlineData(94, "XCIV")]
     public void Number_Convert_To_RomanNumerals(int number, string expect)
     {
         var converter = new RomanNumeralsConverter();

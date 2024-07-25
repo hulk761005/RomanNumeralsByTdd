@@ -11,6 +11,10 @@ public class RomanNumeralsConverter
         {
             switch (number)
             {
+                case >= 90:
+                    sb.Append("XC");
+                    number -= 90;
+                    break;
                 case >= 50:
                     sb.Append('L');
                     number -= 50;
