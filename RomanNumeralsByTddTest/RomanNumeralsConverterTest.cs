@@ -94,4 +94,14 @@ public class RomanNumeralsConverterTest
 
         result.Should().Be("IX");
     }
+    
+    [Fact]
+    public void Number_10_Convert_To_X()
+    {
+        var number = 10;
+        var converter = new RomanNumeralsConverter();
+        var result = converter.Convert(number);
+
+        result.Should().Be("X");
+    }
 }

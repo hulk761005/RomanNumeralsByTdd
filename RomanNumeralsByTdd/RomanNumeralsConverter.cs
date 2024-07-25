@@ -13,6 +13,18 @@ public class RomanNumeralsConverter
     {
         var remainder = 0; 
         var quotient = 0;
+        var sb = new StringBuilder();
+        if (number >= 10)
+        {
+            remainder = number % 10; 
+            quotient = number / 10;
+            if (quotient > 0)
+            {
+                sb.Append('X');
+                number -= 10;
+            }
+        }
+
         if (number == 9)
         {
             return "IX";
@@ -20,7 +32,7 @@ public class RomanNumeralsConverter
 
         remainder = number % 5; 
         quotient = number / 5;
-        var sb = new StringBuilder();
+        
         if (quotient > 0)
         {
             sb.Append('V');
