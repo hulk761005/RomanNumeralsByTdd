@@ -23,4 +23,14 @@ public class RomanNumeralsConverterTest
         
         Assert.Equal("II", result);
     }
+
+    [Fact]
+    public void Number_3_Convert_To_III()
+    {
+        var number = 3;
+        var converter = new RomanNumeralsConverter();
+        var result = converter.Convert(number);
+        
+        Assert.Equal("III", result);
+    }
 }
