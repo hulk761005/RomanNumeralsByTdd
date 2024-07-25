@@ -12,36 +12,31 @@ public class RomanNumeralsConverter
         var sb = new StringBuilder();
 
 
-        while (number >= 10)
+        while (number > 0)
         {
-            sb.Append('X');
-            number -= 10;
-        }
-        if (number == 9)
-        {
-            sb.Append("IX");
-        }
-        else
-        {
-            remainder = number % 5; 
-            quotient = number / 5;
-        
-            if (quotient > 0)
+            switch (number)
             {
-                sb.Append('V');
-            }
-
-            if (remainder == 4)
-            {
-                sb.Append("IV");
-            }
-            else
-            {
-                while (remainder >= 1)
-                {
+                case >= 10:
+                    sb.Append('X');
+                    number -= 10;
+                    break;
+                case 9:
+                    sb.Append("IX");
+                    number -= 9;
+                    break;
+                case >= 5:
+                    sb.Append('V');
+                    number -= 5;
+                    break;
+                case 4:
+                    sb.Append("IV");
+                    number -= 4;
+                    
+                    break;
+                default:
                     sb.Append('I');
-                    remainder -= 1;
-                }
+                    number -= 1;
+                    break;
             }
         }
 
