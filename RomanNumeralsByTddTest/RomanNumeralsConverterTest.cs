@@ -194,4 +194,64 @@ public class RomanNumeralsConverterTest
 
         result.Should().Be("XXI");
     }
+    
+    [Fact]
+    public void Number_22_Convert_To_XXII()
+    {
+        var number = 22;
+        var converter = new RomanNumeralsConverter();
+        var result = converter.Convert(number);
+
+        result.Should().Be("XXII");
+    }
+    
+    [Fact]
+    public void Number_24_Convert_To_XXIV()
+    {
+        var number = 24;
+        var converter = new RomanNumeralsConverter();
+        var result = converter.Convert(number);
+
+        result.Should().Be("XXIV");
+    }
+    
+    [Fact]
+    public void Number_25_Convert_To_XXV()
+    {
+        var number = 25;
+        var converter = new RomanNumeralsConverter();
+        var result = converter.Convert(number);
+
+        result.Should().Be("XXV");
+    }
+    
+    [Fact]
+    public void Number_28_Convert_To_XXVIII()
+    {
+        var number = 28;
+        var converter = new RomanNumeralsConverter();
+        var result = converter.Convert(number);
+
+        result.Should().Be("XXVIII");
+    }
+    
+    [Fact]
+    public void Number_29_Convert_To_XXIX()
+    {
+        var number = 29;
+        var converter = new RomanNumeralsConverter();
+        var result = converter.Convert(number);
+
+        result.Should().Be("XXIX");
+    }
+    
+    [Fact]
+    public void Number_30_Convert_To_XXX()
+    {
+        var number = 30;
+        var converter = new RomanNumeralsConverter();
+        var result = converter.Convert(number);
+
+        result.Should().Be("XXX");
+    }
 }

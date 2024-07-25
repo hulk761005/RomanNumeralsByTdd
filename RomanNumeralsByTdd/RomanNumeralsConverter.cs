@@ -7,11 +7,7 @@ public class RomanNumeralsConverter
     private readonly IEnumerable<char> RomanNumerals = new List<char> { 'X', 'V', 'I' };
     public string Convert(int number)
     {
-        var remainder = 0; 
-        var quotient = 0;
         var sb = new StringBuilder();
-
-
         while (number > 0)
         {
             switch (number)
@@ -31,7 +27,6 @@ public class RomanNumeralsConverter
                 case 4:
                     sb.Append("IV");
                     number -= 4;
-                    
                     break;
                 default:
                     sb.Append('I');
