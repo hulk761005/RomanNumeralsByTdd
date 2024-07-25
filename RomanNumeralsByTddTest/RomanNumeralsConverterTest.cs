@@ -31,6 +31,9 @@ public class RomanNumeralsConverterTest
     [InlineData(28, "XXVIII")]
     [InlineData(29, "XXIX")]
     [InlineData(30, "XXX")]
+    [InlineData(32, "XXXII")]
+    [InlineData(39, "XXXIX")]
+    [InlineData(40, "XL")]
     public void Number_Convert_To_RomanNumerals(int number, string expect)
     {
         var converter = new RomanNumeralsConverter();
