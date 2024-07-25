@@ -154,4 +154,24 @@ public class RomanNumeralsConverterTest
 
         result.Should().Be("XV");
     }
+    
+    [Fact]
+    public void Number_16_Convert_To_XVI()
+    {
+        var number = 16;
+        var converter = new RomanNumeralsConverter();
+        var result = converter.Convert(number);
+
+        result.Should().Be("XVI");
+    }
+    
+    [Fact]
+    public void Number_19_Convert_To_XIX()
+    {
+        var number = 19;
+        var converter = new RomanNumeralsConverter();
+        var result = converter.Convert(number);
+
+        result.Should().Be("XIX");
+    }
 }

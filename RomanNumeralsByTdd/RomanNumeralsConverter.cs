@@ -26,29 +26,30 @@ public class RomanNumeralsConverter
 
         if (number == 9)
         {
-            return "IX";
-        }
-
-        remainder = number % 5; 
-        quotient = number / 5;
-        
-        if (quotient > 0)
-        {
-            sb.Append('V');
-        }
-
-        if (remainder == 4)
-        {
-            sb.Append("IV");
+            sb.Append("IX");
         }
         else
         {
-            for (var i = 0; i < remainder; i++)
+            remainder = number % 5; 
+            quotient = number / 5;
+        
+            if (quotient > 0)
             {
-                sb.Append('I');
+                sb.Append('V');
+            }
+
+            if (remainder == 4)
+            {
+                sb.Append("IV");
+            }
+            else
+            {
+                for (var i = 0; i < remainder; i++)
+                {
+                    sb.Append('I');
+                }
             }
         }
-        
 
         return sb.ToString();
     }
