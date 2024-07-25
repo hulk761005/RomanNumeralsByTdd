@@ -5,253 +5,36 @@ namespace RomanNumeralsByTddTest;
 
 public class RomanNumeralsConverterTest
 {
-    [Fact]
-    public void Number_1_Convert_To_I()
+    [Theory]
+    [InlineData(1, "I")]
+    [InlineData(2, "II")]
+    [InlineData(3, "III")]
+    [InlineData(4, "IV")]
+    [InlineData(5, "V")]
+    [InlineData(6, "VI")]
+    [InlineData(7, "VII")]
+    [InlineData(8, "VIII")]
+    [InlineData(9, "IX")]
+    [InlineData(10, "X")]
+    [InlineData(11, "XI")]
+    [InlineData(12, "XII")]
+    [InlineData(13, "XIII")]
+    [InlineData(14, "XIV")]
+    [InlineData(15, "XV")]
+    [InlineData(16, "XVI")]
+    [InlineData(19, "XIX")]
+    [InlineData(20, "XX")]
+    [InlineData(21, "XXI")]
+    [InlineData(22, "XXII")]
+    [InlineData(24, "XXIV")]
+    [InlineData(25, "XXV")]
+    [InlineData(28, "XXVIII")]
+    [InlineData(29, "XXIX")]
+    [InlineData(30, "XXX")]
+    public void Number_Convert_To_RomanNumerals(int number, string expect)
     {
-        var number = 1;
         var converter = new RomanNumeralsConverter();
         var result = converter.Convert(number);
-
-        result.Should().Be("I");
-    }
-
-    [Fact]
-    public void Number_2_Convert_To_II()
-    {
-        var number = 2;
-        var converter = new RomanNumeralsConverter();
-        var result = converter.Convert(number);
-
-        result.Should().Be("II");
-    }
-
-    [Fact]
-    public void Number_3_Convert_To_III()
-    {
-        var number = 3;
-        var converter = new RomanNumeralsConverter();
-        var result = converter.Convert(number);
-
-        result.Should().Be("III");
-    }
-
-    [Fact]
-    public void Number_4_Convert_To_IV()
-    {
-        var number = 4;
-        var converter = new RomanNumeralsConverter();
-        var result = converter.Convert(number);
-
-        result.Should().Be("IV");
-    }
-
-    [Fact]
-    public void Number_5_Convert_To_V()
-    {
-        var number = 5;
-        var converter = new RomanNumeralsConverter();
-        var result = converter.Convert(number);
-
-        result.Should().Be("V");
-    }
-
-    [Fact]
-    public void Number_6_Convert_To_VI()
-    {
-        var number = 6;
-        var converter = new RomanNumeralsConverter();
-        var result = converter.Convert(number);
-
-        result.Should().Be("VI");
-    }
-
-    [Fact]
-    public void Number_7_Convert_To_VII()
-    {
-        var number = 7;
-        var converter = new RomanNumeralsConverter();
-        var result = converter.Convert(number);
-
-        result.Should().Be("VII");
-    }
-
-    [Fact]
-    public void Number_8_Convert_To_VIII()
-    {
-        var number = 8;
-        var converter = new RomanNumeralsConverter();
-        var result = converter.Convert(number);
-
-        result.Should().Be("VIII");
-    }
-
-    [Fact]
-    public void Number_9_Convert_To_IX()
-    {
-        var number = 9;
-        var converter = new RomanNumeralsConverter();
-        var result = converter.Convert(number);
-
-        result.Should().Be("IX");
-    }
-
-    [Fact]
-    public void Number_10_Convert_To_X()
-    {
-        var number = 10;
-        var converter = new RomanNumeralsConverter();
-        var result = converter.Convert(number);
-
-        result.Should().Be("X");
-    }
-
-    [Fact]
-    public void Number_11_Convert_To_XI()
-    {
-        var number = 11;
-        var converter = new RomanNumeralsConverter();
-        var result = converter.Convert(number);
-
-        result.Should().Be("XI");
-    }
-
-    [Fact]
-    public void Number_12_Convert_To_XII()
-    {
-        var number = 12;
-        var converter = new RomanNumeralsConverter();
-        var result = converter.Convert(number);
-
-        result.Should().Be("XII");
-    }
-
-    [Fact]
-    public void Number_13_Convert_To_XIII()
-    {
-        var number = 13;
-        var converter = new RomanNumeralsConverter();
-        var result = converter.Convert(number);
-
-        result.Should().Be("XIII");
-    }
-
-    [Fact]
-    public void Number_14_Convert_To_XIV()
-    {
-        var number = 14;
-        var converter = new RomanNumeralsConverter();
-        var result = converter.Convert(number);
-
-        result.Should().Be("XIV");
-    }
-
-    [Fact]
-    public void Number_15_Convert_To_XV()
-    {
-        var number = 15;
-        var converter = new RomanNumeralsConverter();
-        var result = converter.Convert(number);
-
-        result.Should().Be("XV");
-    }
-
-    [Fact]
-    public void Number_16_Convert_To_XVI()
-    {
-        var number = 16;
-        var converter = new RomanNumeralsConverter();
-        var result = converter.Convert(number);
-
-        result.Should().Be("XVI");
-    }
-
-    [Fact]
-    public void Number_19_Convert_To_XIX()
-    {
-        var number = 19;
-        var converter = new RomanNumeralsConverter();
-        var result = converter.Convert(number);
-
-        result.Should().Be("XIX");
-    }
-
-    [Fact]
-    public void Number_20_Convert_To_XX()
-    {
-        var number = 20;
-        var converter = new RomanNumeralsConverter();
-        var result = converter.Convert(number);
-
-        result.Should().Be("XX");
-    }
-
-    [Fact]
-    public void Number_21_Convert_To_XXI()
-    {
-        var number = 21;
-        var converter = new RomanNumeralsConverter();
-        var result = converter.Convert(number);
-
-        result.Should().Be("XXI");
-    }
-    
-    [Fact]
-    public void Number_22_Convert_To_XXII()
-    {
-        var number = 22;
-        var converter = new RomanNumeralsConverter();
-        var result = converter.Convert(number);
-
-        result.Should().Be("XXII");
-    }
-    
-    [Fact]
-    public void Number_24_Convert_To_XXIV()
-    {
-        var number = 24;
-        var converter = new RomanNumeralsConverter();
-        var result = converter.Convert(number);
-
-        result.Should().Be("XXIV");
-    }
-    
-    [Fact]
-    public void Number_25_Convert_To_XXV()
-    {
-        var number = 25;
-        var converter = new RomanNumeralsConverter();
-        var result = converter.Convert(number);
-
-        result.Should().Be("XXV");
-    }
-    
-    [Fact]
-    public void Number_28_Convert_To_XXVIII()
-    {
-        var number = 28;
-        var converter = new RomanNumeralsConverter();
-        var result = converter.Convert(number);
-
-        result.Should().Be("XXVIII");
-    }
-    
-    [Fact]
-    public void Number_29_Convert_To_XXIX()
-    {
-        var number = 29;
-        var converter = new RomanNumeralsConverter();
-        var result = converter.Convert(number);
-
-        result.Should().Be("XXIX");
-    }
-    
-    [Fact]
-    public void Number_30_Convert_To_XXX()
-    {
-        var number = 30;
-        var converter = new RomanNumeralsConverter();
-        var result = converter.Convert(number);
-
-        result.Should().Be("XXX");
+        result.Should().Be(expect);
     }
 }
