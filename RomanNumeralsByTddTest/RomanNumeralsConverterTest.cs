@@ -54,4 +54,14 @@ public class RomanNumeralsConverterTest
 
         result.Should().Be("V");
     }
+    
+    [Fact]
+    public void Number_6_Convert_To_VI()
+    {
+        var number = 6;
+        var converter = new RomanNumeralsConverter();
+        var result = converter.Convert(number);
+
+        result.Should().Be("VI");
+    }
 }

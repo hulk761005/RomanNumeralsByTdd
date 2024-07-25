@@ -11,13 +11,20 @@ public class RomanNumeralsConverter
     };
     public string Convert(int number)
     {
+        var remainder = number % 5; 
+        var quotient = number / 5;
         var sb = new StringBuilder();
-        if (number > 3)
+        if (quotient > 0)
         {
-            return RomanNumeralsDictionary[number];
+            sb.Append('V');
         }
 
-        for (var i = 0; i < number; i++)
+        if (remainder == 4)
+        {
+            return "IV";
+        }
+
+        for (var i = 0; i < remainder; i++)
         {
             sb.Append('I');
         }
