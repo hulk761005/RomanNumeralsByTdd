@@ -1,4 +1,5 @@
-﻿using RomanNumeralsByTdd;
+﻿using FluentAssertions;
+using RomanNumeralsByTdd;
 
 namespace RomanNumeralsByTddTest;
 
@@ -11,7 +12,7 @@ public class RomanNumeralsConverterTest
         var converter = new RomanNumeralsConverter();
         var result = converter.Convert(number);
         
-        Assert.Equal("I", result);
+        result.Should().Be("I");
     }
 
     [Fact]
@@ -21,7 +22,7 @@ public class RomanNumeralsConverterTest
         var converter = new RomanNumeralsConverter();
         var result = converter.Convert(number);
         
-        Assert.Equal("II", result);
+        result.Should().Be("II");
     }
 
     [Fact]
@@ -31,6 +32,26 @@ public class RomanNumeralsConverterTest
         var converter = new RomanNumeralsConverter();
         var result = converter.Convert(number);
         
-        Assert.Equal("III", result);
+        result.Should().Be("III");
+    }
+    
+    [Fact]
+    public void Number_4_Convert_To_IV()
+    {
+        var number = 4;
+        var converter = new RomanNumeralsConverter();
+        var result = converter.Convert(number);
+        
+        result.Should().Be("IV");
+    }
+    
+    [Fact]
+    public void Number_5_Convert_To_V()
+    {
+        var number = 5;
+        var converter = new RomanNumeralsConverter();
+        var result = converter.Convert(number);
+
+        result.Should().Be("V");
     }
 }
