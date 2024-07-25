@@ -184,4 +184,14 @@ public class RomanNumeralsConverterTest
 
         result.Should().Be("XX");
     }
+
+    [Fact]
+    public void Number_21_Convert_To_XXI()
+    {
+        var number = 21;
+        var converter = new RomanNumeralsConverter();
+        var result = converter.Convert(number);
+
+        result.Should().Be("XXI");
+    }
 }
