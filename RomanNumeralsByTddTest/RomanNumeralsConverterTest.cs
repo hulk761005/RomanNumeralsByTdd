@@ -104,4 +104,54 @@ public class RomanNumeralsConverterTest
 
         result.Should().Be("X");
     }
+    
+    [Fact]
+    public void Number_11_Convert_To_XI()
+    {
+        var number = 11;
+        var converter = new RomanNumeralsConverter();
+        var result = converter.Convert(number);
+
+        result.Should().Be("XI");
+    }
+    
+    [Fact]
+    public void Number_12_Convert_To_XII()
+    {
+        var number = 12;
+        var converter = new RomanNumeralsConverter();
+        var result = converter.Convert(number);
+
+        result.Should().Be("XII");
+    }
+    
+    [Fact]
+    public void Number_13_Convert_To_XIII()
+    {
+        var number = 13;
+        var converter = new RomanNumeralsConverter();
+        var result = converter.Convert(number);
+
+        result.Should().Be("XIII");
+    }
+
+    [Fact]
+    public void Number_14_Convert_To_XIV()
+    {
+        var number = 14;
+        var converter = new RomanNumeralsConverter();
+        var result = converter.Convert(number);
+
+        result.Should().Be("XIV");
+    }
+    
+    [Fact]
+    public void Number_15_Convert_To_XV()
+    {
+        var number = 15;
+        var converter = new RomanNumeralsConverter();
+        var result = converter.Convert(number);
+
+        result.Should().Be("XV");
+    }
 }

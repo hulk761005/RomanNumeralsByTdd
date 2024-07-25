@@ -16,7 +16,6 @@ public class RomanNumeralsConverter
         var sb = new StringBuilder();
         if (number >= 10)
         {
-            remainder = number % 10; 
             quotient = number / 10;
             if (quotient > 0)
             {
@@ -40,13 +39,16 @@ public class RomanNumeralsConverter
 
         if (remainder == 4)
         {
-            return "IV";
+            sb.Append("IV");
         }
-
-        for (var i = 0; i < remainder; i++)
+        else
         {
-            sb.Append('I');
+            for (var i = 0; i < remainder; i++)
+            {
+                sb.Append('I');
+            }
         }
+        
 
         return sb.ToString();
     }
