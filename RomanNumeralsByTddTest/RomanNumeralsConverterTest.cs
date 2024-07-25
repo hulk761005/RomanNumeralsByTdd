@@ -47,6 +47,12 @@ public class RomanNumeralsConverterTest
     [InlineData(72, "LXXII")]
     [InlineData(94, "XCIV")]
     [InlineData(100, "C")]
+    [InlineData(3749, "MMMDCCXLIX")]
+    [InlineData(58, "LVIII")]
+    [InlineData(1994, "MCMXCIV")]
+    [InlineData(1827, "MDCCCXXVII")]
+    [InlineData(1940, "MCMXL")]
+    [InlineData(1860, "MDCCCLX")]
     public void Number_Convert_To_RomanNumerals(int number, string expect)
     {
         var converter = new RomanNumeralsConverter();

@@ -11,6 +11,22 @@ public class RomanNumeralsConverter
         {
             switch (number)
             {
+                case >= 1000:
+                    sb.Append('M');
+                    number -= 1000;
+                    break;
+                case >= 900:
+                    sb.Append("CM");
+                    number -= 900;
+                    break;
+                case >= 500:
+                    sb.Append('D');
+                    number -= 500;
+                    break;
+                case >= 400:
+                    sb.Append("CD");
+                    number -= 400;
+                    break;
                 case >= 100:
                     sb.Append('C');
                     number -= 100;
