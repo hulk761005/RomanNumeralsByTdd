@@ -4,7 +4,6 @@ namespace RomanNumeralsByTdd;
 
 public class RomanNumeralsConverter
 {
-    private readonly IEnumerable<char> RomanNumerals = new List<char> { 'X', 'V', 'I' };
     public string Convert(int number)
     {
         var sb = new StringBuilder();
@@ -12,6 +11,10 @@ public class RomanNumeralsConverter
         {
             switch (number)
             {
+                case >= 50:
+                    sb.Append('L');
+                    number -= 50;
+                    break;
                 case >= 40:
                     sb.Append("XL");
                     number -= 40;
@@ -20,7 +23,7 @@ public class RomanNumeralsConverter
                     sb.Append('X');
                     number -= 10;
                     break;
-                case 9:
+                case >= 9:
                     sb.Append("IX");
                     number -= 9;
                     break;
@@ -28,7 +31,7 @@ public class RomanNumeralsConverter
                     sb.Append('V');
                     number -= 5;
                     break;
-                case 4:
+                case >= 4:
                     sb.Append("IV");
                     number -= 4;
                     break;
