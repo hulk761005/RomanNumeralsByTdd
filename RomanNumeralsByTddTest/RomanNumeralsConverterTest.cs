@@ -46,6 +46,7 @@ public class RomanNumeralsConverterTest
     [InlineData(50, "L")]
     [InlineData(72, "LXXII")]
     [InlineData(94, "XCIV")]
+    [InlineData(100, "C")]
     public void Number_Convert_To_RomanNumerals(int number, string expect)
     {
         var converter = new RomanNumeralsConverter();
