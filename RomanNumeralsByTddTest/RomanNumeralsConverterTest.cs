@@ -64,4 +64,24 @@ public class RomanNumeralsConverterTest
 
         result.Should().Be("VI");
     }
+    
+    [Fact]
+    public void Number_7_Convert_To_VII()
+    {
+        var number = 7;
+        var converter = new RomanNumeralsConverter();
+        var result = converter.Convert(number);
+
+        result.Should().Be("VII");
+    }
+    
+    [Fact]
+    public void Number_8_Convert_To_VIII()
+    {
+        var number = 8;
+        var converter = new RomanNumeralsConverter();
+        var result = converter.Convert(number);
+
+        result.Should().Be("VIII");
+    }
 }
