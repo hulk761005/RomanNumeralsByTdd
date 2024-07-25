@@ -4,26 +4,19 @@ namespace RomanNumeralsByTdd;
 
 public class RomanNumeralsConverter
 {
-    private readonly Dictionary<int, string> RomanNumeralsDictionary = new()
-    {
-        { 4, "IV" },
-        { 2, "V" }
-    };
+    private readonly IEnumerable<char> RomanNumerals = new List<char> { 'X', 'V', 'I' };
     public string Convert(int number)
     {
         var remainder = 0; 
         var quotient = 0;
         var sb = new StringBuilder();
-        if (number >= 10)
-        {
-            quotient = number / 10;
-            if (quotient > 0)
-            {
-                sb.Append('X');
-                number -= 10;
-            }
-        }
 
+
+        while (number >= 10)
+        {
+            sb.Append('X');
+            number -= 10;
+        }
         if (number == 9)
         {
             sb.Append("IX");
@@ -44,9 +37,10 @@ public class RomanNumeralsConverter
             }
             else
             {
-                for (var i = 0; i < remainder; i++)
+                while (remainder >= 1)
                 {
                     sb.Append('I');
+                    remainder -= 1;
                 }
             }
         }

@@ -94,7 +94,7 @@ public class RomanNumeralsConverterTest
 
         result.Should().Be("IX");
     }
-    
+
     [Fact]
     public void Number_10_Convert_To_X()
     {
@@ -104,7 +104,7 @@ public class RomanNumeralsConverterTest
 
         result.Should().Be("X");
     }
-    
+
     [Fact]
     public void Number_11_Convert_To_XI()
     {
@@ -114,7 +114,7 @@ public class RomanNumeralsConverterTest
 
         result.Should().Be("XI");
     }
-    
+
     [Fact]
     public void Number_12_Convert_To_XII()
     {
@@ -124,7 +124,7 @@ public class RomanNumeralsConverterTest
 
         result.Should().Be("XII");
     }
-    
+
     [Fact]
     public void Number_13_Convert_To_XIII()
     {
@@ -144,7 +144,7 @@ public class RomanNumeralsConverterTest
 
         result.Should().Be("XIV");
     }
-    
+
     [Fact]
     public void Number_15_Convert_To_XV()
     {
@@ -154,7 +154,7 @@ public class RomanNumeralsConverterTest
 
         result.Should().Be("XV");
     }
-    
+
     [Fact]
     public void Number_16_Convert_To_XVI()
     {
@@ -164,7 +164,7 @@ public class RomanNumeralsConverterTest
 
         result.Should().Be("XVI");
     }
-    
+
     [Fact]
     public void Number_19_Convert_To_XIX()
     {
@@ -173,5 +173,15 @@ public class RomanNumeralsConverterTest
         var result = converter.Convert(number);
 
         result.Should().Be("XIX");
+    }
+
+    [Fact]
+    public void Number_20_Convert_To_XX()
+    {
+        var number = 20;
+        var converter = new RomanNumeralsConverter();
+        var result = converter.Convert(number);
+
+        result.Should().Be("XX");
     }
 }
